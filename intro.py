@@ -1,0 +1,6 @@
+print("Sonia Murei")
+print(1000000)
+print(3.14)
+print(True)
+print("False")
+print("error")
