@@ -1,6 +1,9 @@
 # Clean up the following variable to give the clean version in lower case.
-name=" JOHn "
-print(name.lower().strip())
+name=" JOHn  ."
+name=name.replace("."," ")
+name=name.strip()
+name=name.lower()
+print(name)
 
 # only display “Breed is German”
 sentence_one = "The Dog Breed is German Shepherd"
@@ -16,11 +19,18 @@ print(len("The lazy dog; ran so fast; it hit the wall.".split(";")))
 # Clean up and display Full name i.e John Doe
 first_name = " Joh.n "
 last_name = " Do,e "
-name1= first_name.strip().replace(".","")
-name2= last_name.strip().replace(",","")
-print(name1+" "+name2)
+first_name= first_name.strip()
+first_name= first_name.replace(".","")
+
+last_name= last_name.strip()
+last_name= last_name.replace(",","")
+
+print(first_name+" "+last_name)
 
 # Having the string r = '["E","W","C"]' Manipulate it to display EWC
 r= '["E","W","C"]'
-r1= r.replace(",", "").replace("[", "").replace("]", "").replace('"', "")
-print(r1)
+r= r.replace(",", "")
+r= r.replace("[", "")
+r= r.replace("]", "")
+r= r.replace('"', "")
+print(r)
