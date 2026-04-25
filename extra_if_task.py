@@ -40,15 +40,14 @@ else:
 
 password=input("Enter Password: ")
 
-has_digit = any(char.isdigit() for char in password)
 has_upper = any(char.isupper() for char in password)
 
 
 if len(password) <6:
     print("Weak")
-elif len(password) >=6 and len(password) <=10 and has_digit:
+elif len(password) >=6 and len(password) <=10 and password.isalnum:
     print("Moderate")
-elif len(password) >10 and has_digit and has_upper:
+elif len(password) >10 and password.isalnum and has_upper:
     print("Strong")
 else:
     print("Weak")
@@ -173,9 +172,9 @@ else:
 year=input('Enter year: ')
 year=int(year)
 
-if year%100 == 0:
+if year%100 == 0 and year%400!=0:
     print('Century year')
-elif year%4 == 0:
+elif year%4 == 0 or year%400==0:
     print('Leap year')
 else:
     print('Common year')
