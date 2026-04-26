@@ -5,9 +5,9 @@
 # Otherwise allow printing.
 
 balance=input("Enter balance: ")
-balance=int(balance)
+balance=float(balance)
 
-if balance>0:
+if balance>0.00:
     print('Access Denied')
 else:
     print('Access Granted')
@@ -49,10 +49,36 @@ elif bundles < 100:
 else:
     print("Sufficient internet bundles")
 
+    # Theuri's Answer
+
+# data=input('Enter Remaining Data: ')
+# data=float(data)
+
+# if data > 0 and data <= 100:
+#     print('Your Data is below 100MB')
+# elif data >= 100:
+#     print('Your Data is enough')
+# else:
+#     print('Buy data')
+
 # Q4
 # A retail shop wants to identify wholesale customers. Create a system
 # that checks how many items a customer has bought. If items are more
 # than five, reward points should be given.
+
+    # Arik's Answer
+
+# items_bought = input('Enter Number of Item: ')
+# items_bought=int(items_bought)
+# wholesale_threshold = 5
+# Reward_points = 10
+
+# if items_bought > 5:
+#     reward_points = 10
+#     print(f'You have bought {items_bought} items.')
+#     print(f'You have earn {Reward_points} points.')
+# else:
+#     print(f'You have bought {items_bought}items. buy more than 5 to earn points')
 
 item_number=input("Enter number of items bought: ")
 item_number=int(item_number)
