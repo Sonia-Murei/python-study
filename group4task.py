@@ -8,9 +8,11 @@ balance=input("Enter balance: ")
 balance=float(balance)
 
 if balance>0.00:
-    print('Access Denied')
+    res='Access to Exam Card Denied'
 else:
-    print('Access Granted')
+    res='Printing Allowed'
+
+print(res)
 
 # Q2
 # A parking company wants to automate entry control. Build a program
@@ -30,9 +32,12 @@ occupied_spaces=int(occupied_spaces)
 available_spaces = total_spaces - occupied_spaces
 
 if available_spaces > 0:
-    print("Entry allowed.")
+    available_spaces=available_spaces-1
+    value=f"Entry allowed. {available_spaces} spaces available."
 else:
-    print("Parking full. Entry denied.")
+    value=f"Entry denied. {available_spaces} spaces available ."
+
+print(value)
 
 # Q3
 # A mobile network provider wants to warn customers when internet
@@ -43,11 +48,13 @@ bundles=input("Enter  internet bundles:")
 bundles=int(bundles)
 
 if bundles == 0:
-    print("Browsing blocked")
+    val=f"Browsing blocked"
 elif bundles < 100:
-    print("Warning! Low internet bundles")
+    val=f"Your {bundles}MB is below 100MB"
 else:
-    print("Sufficient internet bundles")
+    val=f"You have {bundles}MB"
+
+print(val)
 
     # Theuri's Answer
 
@@ -68,22 +75,25 @@ else:
 
     # Arik's Answer
 
-# items_bought = input('Enter Number of Item: ')
-# items_bought=int(items_bought)
-# wholesale_threshold = 5
-# Reward_points = 10
+items_bought = input('Enter Number of Items: ')
+items_bought=int(items_bought)
+wholesale_threshold = 5
 
-# if items_bought > 5:
-#     reward_points = 10
-#     print(f'You have bought {items_bought} items.')
-#     print(f'You have earn {Reward_points} points.')
-# else:
-#     print(f'You have bought {items_bought}items. buy more than 5 to earn points')
-
-item_number=input("Enter number of items bought: ")
-item_number=int(item_number)
-
-if item_number>5:
-    print("Give reward points")
+if items_bought > 5:
+    reward_points = items_bought/wholesale_threshold
+    res=f'You have bought {items_bought} items.'
+    res=f'You have earn {reward_points} points.'
 else:
-    print("No reward points")
+    remaining=wholesale_threshold-items_bought
+    res=f'You have bought {items_bought} items. Add {remaining} more items to earn points'
+
+print(res)
+
+        # My Answer
+# item_number=input("Enter number of items bought: ")
+# item_number=int(item_number)
+
+# if item_number>5:
+#     print("Give reward points")
+# else:
+#     print("No reward points")
