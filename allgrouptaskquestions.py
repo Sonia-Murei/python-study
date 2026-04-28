@@ -1,168 +1,168 @@
-# # # GROUP 1
-# # # Q1
-# # # A bank wants to improve its ATM service. Create a program that
-# # # stores a customer’s name and account balance, then allows them to
-# # # request a withdrawal. If the amount requested is greater than the
-# # # available balance, the transaction should fail. If successful, deduct the
-# # # amount together with a transaction fee of KES 30 and display the new
-# # # balance.
+# GROUP 1
+# Q1
+# A bank wants to improve its ATM service. Create a program that
+# stores a customer’s name and account balance, then allows them to
+# request a withdrawal. If the amount requested is greater than the
+# available balance, the transaction should fail. If successful, deduct the
+# amount together with a transaction fee of KES 30 and display the new
+# balance.
 
-# customer_name = input("Enter customer name: ")
-# account_balance = 100000
-# amount_requested = input("Enter the amount to withdraw: ")
-# amount_requested = int(amount_requested)
+customer_name = input("Enter customer name: ")
+account_balance = 100000
+amount_requested = input("Enter the amount to withdraw: ")
+amount_requested = int(amount_requested)
 
-# trans = 30
+trans = 30
 
-# if amount_requested > account_balance:
-#     res=f"Hello {customer_name},Transaction failed; Insufficient funds to withdraw {amount_requested}. Your balance is {account_balance}"
-# else:
-#     account_balance = account_balance-(amount_requested + trans)
-#     res=f"Hell0 {customer_name}, {amount_requested} withdrawn successfully. New balance: {account_balance} "
+if amount_requested > account_balance:
+    res=f"Hello {customer_name},Transaction failed; Insufficient funds to withdraw {amount_requested}. Your balance is {account_balance}"
+else:
+    account_balance = account_balance-(amount_requested + trans)
+    res=f"Hell0 {customer_name}, {amount_requested} withdrawn successfully. New balance: {account_balance} "
 
-# print(res)
+print(res)
 
-# # # Q2
-# # # A trainer entered marks for five subjects and needs help analyzing
-# # # student performance. Create a program that stores the marks in a list,
-# # # calculates the average, awards grade A for averages of 70 and above,
-# # # grade B for averages of 50 to 69, and grade C for anything below 50.
-# # # If any subject score is below 40, display a message showing the
-# # # student must retake that subject.
+# Q2
+# A trainer entered marks for five subjects and needs help analyzing
+# student performance. Create a program that stores the marks in a list,
+# calculates the average, awards grade A for averages of 70 and above,
+# grade B for averages of 50 to 69, and grade C for anything below 50.
+# If any subject score is below 40, display a message showing the
+# student must retake that subject.
 
-# marks=[20,60,30,80,100]
+marks=[20,60,30,80,100]
 
-# average=sum(marks)/len(marks)
-# print(average)
+average=sum(marks)/len(marks)
+print(average)
 
-# if average>=70:
-#     grade='A'
-# elif average<70 and average>=50:
-#     grade='B'
-# elif average<50 and average>=40:
-#     grade='C'
-# else:
-#     grade='Retake the Subject'
+if average>=70:
+    grade='A'
+elif average<70 and average>=50:
+    grade='B'
+elif average<50 and average>=40:
+    grade='C'
+else:
+    grade='Retake the Subject'
 
-# print(grade)
+print(grade)
 
-# # Q3
+# Q3
 
-# # A supermarket manager needs help checking stock levels. Create a
-# # program that stores product names and quantities in a dictionary,
-# # identifies items that are completely out of stock, and also shows
-# # products with quantities below five units that need urgent restocking.
+# A supermarket manager needs help checking stock levels. Create a
+# program that stores product names and quantities in a dictionary,
+# identifies items that are completely out of stock, and also shows
+# products with quantities below five units that need urgent restocking.
 
-# stock = {
-#     "Milk": 10,
-#     "Bread": 2,
-#     "Eggs": 0,
-#     "Sugar": 4,
-#     "Rice": 7,
-#     "Soap": 0
-# }
+stock = {
+    "Milk": 10,
+    "Bread": 2,
+    "Eggs": 0,
+    "Sugar": 4,
+    "Rice": 7,
+    "Soap": 0
+}
 
-# # Check each product and its quantity
-# for item, quantity in stock.items():
-#     if quantity == 0:
-#         print(f"{item} is completely out of stock")
-#     elif quantity < 5:
-#         print(f"{item} has only {quantity} units. Needs urgent restocking")
-#     else:
-#         print(f"{item} has {quantity} units. Sufficient stock")
+# Check each product and its quantity
+for item, quantity in stock.items():
+    if quantity == 0:
+        print(f"{item} is completely out of stock")
+    elif quantity < 5:
+        print(f"{item} has only {quantity} units. Needs urgent restocking")
+    else:
+        print(f"{item} has {quantity} units. Sufficient stock")
 
-# # Q4  ****loop****
-# # A company wants to secure employee accounts. Create a login
-# # system that stores a username and password, allows only three
-# # attempts, locks the account after three failed attempts, and welcomes
-# # the user when the correct credentials are entered.
-
-
-
-# # GROUP 2
-
-# # Q1
-# # An electricity company charges customers based on usage. Create a
-# # billing system where the first 100 units are charged at KES 15 each,
-# # while any additional units are charged at KES 20 each. If the final bill
-# # exceeds KES 5000, add 5% tax before displaying the total.
-
-# units=input("Enter units used: ")
-# units=int(units)
+# Q4  ****loop****
+# A company wants to secure employee accounts. Create a login
+# system that stores a username and password, allows only three
+# attempts, locks the account after three failed attempts, and welcomes
+# the user when the correct credentials are entered.
 
 
-# if units<=100:
-#     charge=units*15
-# elif units>100:
-#     charge=(100*15)+((units-100)*20)
+
+# GROUP 2
+
+# Q1
+# An electricity company charges customers based on usage. Create a
+# billing system where the first 100 units are charged at KES 15 each,
+# while any additional units are charged at KES 20 each. If the final bill
+# exceeds KES 5000, add 5% tax before displaying the total.
+
+units=input("Enter units used: ")
+units=int(units)
 
 
-# if charge>5000:
-#     charge=(0.05*charge)+charge
-#     bill=f"bill is KES {charge}"
-# else:
-#     bill=f"bill is KES {charge}"
-
-# print(bill)
+if units<=100:
+    charge=units*15
+elif units>100:
+    charge=(100*15)+((units-100)*20)
 
 
-# # Q2
-# # A hospital needs a smart queue system. Create a program that stores
-# # patient name and age. Patients above 60 years and children below 5
-# # years should receive priority service, while all others join the normal
-# # queue.
+if charge>5000:
+    charge=(0.05*charge)+charge
+    bill=f"bill is KES {charge}"
+else:
+    bill=f"bill is KES {charge}"
 
-# name=input("Enter patient name: ")
-# age=int(input("Enter patient age: "))
-
-# if age>60 or age<5:
-#     res=f"Patient is {age} years old. Give priority service."
-# else:
-#     res=f"Patient is {age} years old. Join normal queue."
-
-# print(res)
-
-# # Q3
-# # An online store wants an automated checkout system. Create a
-# # program that stores purchased items in a list and calculates the total
-# # cost. If the amount is above KES 3000, apply a 10% discount. If the
-# # total is below KES 1000, add a delivery fee.
+print(bill)
 
 
-# items = ["Shoes", "Bag", "Watch"]
+# Q2
+# A hospital needs a smart queue system. Create a program that stores
+# patient name and age. Patients above 60 years and children below 5
+# years should receive priority service, while all others join the normal
+# queue.
 
-# total=int(input("Enter total cost of items: "))
-# delivery_fee=250
+name=input("Enter patient name: ")
+age=int(input("Enter patient age: "))
 
-# if total>3000:
-#     total=total-(0.1*total)
-#     cost=f"Total is above KES 3000. Cost after discount is KES {total}."
-# elif total<1000:
-#     total=total+delivery_fee
-#     cost=f"Total is below KES 1000. Cost with delivery fee included is KES {total}."
-# else:
-#     remaining=3000-total
-#     cost=f"Total is KES {total}. Spend KES {remaining} more to get a 10% discount."
+if age>60 or age<5:
+    res=f"Patient is {age} years old. Give priority service."
+else:
+    res=f"Patient is {age} years old. Join normal queue."
 
-# print(cost)
+print(res)
 
-# # Q4
-# # A website wants users to create stronger passwords. Build a
-# # password checker that verifies password length, checks whether it
-# # contains numbers and special characters, then classifies it as Weak,
-# # Medium, or Strong.
-
-# password=input("Enter Password: ")
+# Q3
+# An online store wants an automated checkout system. Create a
+# program that stores purchased items in a list and calculates the total
+# cost. If the amount is above KES 3000, apply a 10% discount. If the
+# total is below KES 1000, add a delivery fee.
 
 
-# if len(password) <6 and not password.isalnum:
-#     print("Weak")
-# elif len(password) >=6 and len(password) <=10 and password.isalnum:
-#     print("Medium")
-# elif len(password) >10 and password.isalnum:
-#     print("Strong")
-# else:
-#     print("Weak")
+items = ["Shoes", "Bag", "Watch"]
+
+total=int(input("Enter total cost of items: "))
+delivery_fee=250
+
+if total>3000:
+    total=total-(0.1*total)
+    cost=f"Total is above KES 3000. Cost after discount is KES {total}."
+elif total<1000:
+    total=total+delivery_fee
+    cost=f"Total is below KES 1000. Cost with delivery fee included is KES {total}."
+else:
+    remaining=3000-total
+    cost=f"Total is KES {total}. Spend KES {remaining} more to get a 10% discount."
+
+print(cost)
+
+# Q4
+# A website wants users to create stronger passwords. Build a
+# password checker that verifies password length, checks whether it
+# contains numbers and special characters, then classifies it as Weak,
+# Medium, or Strong.
+
+password=input("Enter Password: ")
+
+
+if len(password) <6 and not password.isalnum:
+    print("Weak")
+elif len(password) >=6 and len(password) <=10 and password.isalnum:
+    print("Medium")
+elif len(password) >10 and password.isalnum:
+    print("Strong")
+else:
+    print("Weak")
 
 
 # GROUP 3
@@ -202,7 +202,18 @@ print(val)
 # Employees earning above KES 80,000 should pay 30% tax while the
 # rest pay 20%. Display the final net salary.
 
+basic_salary=float(input("Enter basic salary: "))
+allowance=float(input("Enter allowance: "))
+salary=basic_salary+allowance
 
+if salary>80000:
+    salary=salary-(0.3*salary)
+    net_salary=f"final net salary is {salary:.2f}"
+else:
+    salary=salary-(0.2*salary)
+    net_salary=f"final net salary is {salary:.2f}"
+
+print(net_salary)
 
 # Q3
 # A weather station records daily temperatures. Create a system that
@@ -210,7 +221,17 @@ print(val)
 # cold weather when below 15 degrees, and shows normal conditions
 # otherwise.
 
+temp=input("Enter temperature: ")
+temp=float(temp)
 
+if temp>35:
+    value=f"Hot weather, temperature is {temp:.1f} degrees."
+elif temp<15:
+    value=f"Cold weather, temperature is {temp:.1f} degrees."
+else:
+    value=f"Normal weather, temperature is {temp:.1f} degrees."
+
+print(value)
 
 # Q4
 # A courier company wants package tracking. Create a system that
@@ -219,7 +240,19 @@ print(val)
 # should display a thank-you message, and packages in transit should
 # show estimated arrival.
 
+status = input("Enter package status (delayed, delivered, in transit): ").lower()
 
+if status=="delayed":
+    note="Notification to customer, your package has been delayed."
+elif status=="delivered":
+    note="Your package has been delivered successfully. Thank you for choosing our courier service!"
+elif status == "in transit":
+    arrival = input("Enter estimated arrival date/time: ")
+    note=f"Your package is still in transit.Estimated arrival:{arrival}"
+else:
+    note="Invalid package status entered."
+
+print(note)
 
 
 # GROUP 4
@@ -229,18 +262,73 @@ print(val)
 # exams. Create a program that checks a student’s fee balance. If the
 # balance is greater than zero, deny access to the exam card.
 # Otherwise allow printing.
+
+balance=input("Enter balance: ")
+balance=float(balance)
+
+if balance>0.00:
+    res='Access to Exam Card Denied'
+else:
+    res='Printing Allowed'
+
+print(res)
+
 # Q2
 # A parking company wants to automate entry control. Build a program
 # that stores the total parking spaces and occupied spaces, then
 # calculates available slots. If the lot is full, deny new entry.
+
+total_spaces = (input("Enter total parking spaces: "))
+total_spaces=int(total_spaces)
+occupied_spaces = (input("Enter occupied spaces: "))
+occupied_spaces=int(occupied_spaces)
+
+available_spaces = total_spaces - occupied_spaces
+
+if available_spaces > 0:
+    available_spaces=available_spaces-1
+    value=f"Entry allowed. {available_spaces} spaces available."
+else:
+    value=f"Entry denied. {available_spaces} spaces available ."
+
+print(value)
+
 # Q3
 # A mobile network provider wants to warn customers when internet
 # bundles are low. Build a program that checks remaining data in MB. If
 # below 100MB, warn the user. If zero, block browsing.
+
+bundles=input("Enter  internet bundles:")
+bundles=int(bundles)
+
+if bundles == 0:
+    val=f"Browsing blocked"
+elif bundles < 100:
+    val=f"Your {bundles}MB is below 100MB"
+else:
+    val=f"You have {bundles}MB"
+
+print(val)
+
 # Q4
 # A retail shop wants to identify wholesale customers. Create a system
 # that checks how many items a customer has bought. If items are more
 # than five, reward points should be given.
+
+items_bought = input('Enter Number of Items: ')
+items_bought=int(items_bought)
+wholesale_threshold = 5
+
+if items_bought > 5:
+    reward_points = items_bought/wholesale_threshold
+    res=f'You have bought {items_bought} items.'
+    res=f'You have earn {reward_points} points.'
+else:
+    remaining=wholesale_threshold-items_bought
+    res=f'You have bought {items_bought} items. Add {remaining} more items to earn points'
+
+print(res)
+
 
 # GROUP 5
 
@@ -248,18 +336,67 @@ print(val)
 # A bank is reviewing loan applications. Create a program that checks
 # salary and age. Applicants below 21 years should be rejected, while
 # those above 21 with salaries above KES 50,000 should be approved.
+
+age=int(input("Enter your age: "))
+salary=int(input("Enter your salary: "))
+
+if age<21:
+    res=f"Loan application rejected, your age is {age} years. Must be 21 or above to qualify."
+elif age>=21 and salary>50000:
+    res=f"Loan application approved, your salary of KES {salary} and age of {age} years meets the loan application requirements."
+else:
+    res=f"Loan application rejected, your salary of KES {salary} is below the minimum requirement of KES 50,000."
+
+print(res)
+
 # Q2
 # A smartphone company wants a battery safety alert. Build a program
 # that checks battery percentage. If below 20%, warn the user to
 # charge. If below 5%, activate emergency mode.
+
+battery_percentage=int(input("Enter battery percentage(%): "))
+
+if battery_percentage<20 and battery_percentage>=5:
+    disp=f"Low battery:{battery_percentage}%. Charge device."
+elif battery_percentage<5:
+    disp=f"Battery is at {battery_percentage}%. Emergency mode activated"
+else:
+    disp=f"Battery is at {battery_percentage}%. Sufficient power."
+
+print(disp)
+
 # Q3
 # A school wants to monitor attendance. Create a system that stores
 # attended classes and total classes, calculates attendance percentage,
 # and warns students whose attendance is below 75%.
+
+total_classes=int(input("Enter total classes: "))
+attended_classes=int(input("Enter attended classes: "))
+
+attendance_percentage=(attended_classes/total_classes)*100
+
+if attendance_percentage<75:
+    res=f"Attendance is {attendance_percentage}%. Needs improvement."
+else:
+    res=f"Attendance is {attendance_percentage}%. Keep it up."
+    
+print(res)
+
 # Q4
 # A courier company wants to improve communication. Build a system
 # that compares expected delivery date with the current day and alerts
 # customers if the package is delayed.
+
+expected_day = int(input("Enter expected delivery day: "))
+current_day = int(input("Enter current day: "))
+
+if current_day > expected_day:
+    ps="Alert to customer. Your package is delayed."
+
+else:
+    ps="Your package is on schedule."
+
+print(ps)
 
 # GROUP 6
 
