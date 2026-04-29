@@ -76,6 +76,17 @@ elif isinstance(value, int):
 else:
     print("Unknown Type")
 
+    # Alternative Answer:
+
+value=10
+
+if type(value)==str:
+    print("String Detected")
+elif type(value)==int:
+    print("Integer Detected")
+else:
+    print("Unknown Type")
+
 # 5.Given x = 7 and y = 14, write nested conditional statements that print:
 # "x and y are both even" if both x and y are even numbers.
 # "Only y is even" if only y is even.

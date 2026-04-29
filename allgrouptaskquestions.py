@@ -510,11 +510,50 @@ print(ps)
 # An electricity token system is running low on units. Build a program
 # that checks remaining token balance and warns users when they are
 # close to exhaustion.
+
+token_balance=int(input("Enter token balance: "))
+
+if token_balance<100:
+    res=f"Warning, {token_balance} units available. close to exhaustion."
+else:
+    res=f"{token_balance} units available.Sufficient token balance."
+
+print(res)
+
+
+    # ChatGPT answer
+# token_balance = int(input("Enter token balance: "))
+
+# if token_balance < 100:
+#     if token_balance < 20:
+#         print("Critical warning: Token almost finished.")
+#     else:
+#         print("Warning, close to exhaustion.")
+# else:
+#     print("Sufficient token balance.")
 # Q2
 # A library system is managing membership cards. Create a program
 # that checks whether a membership card is expired and prevents
 # borrowing if it is not valid.
+
+membership_status=input("Enter membership card status(Expired/Valid): ").title()
+
+if membership_status== "Valid":
+    val="Your membership card is valid. Permitted to borrow books."
+else:
+    val="Your memebership card is expired. Borrowing not allowed."
+
+print(val)
+
 # Q3
 # A hospital appointment system is managing bookings. Build a program
 # that checks doctor availability and either confirms an appointment or
 # suggests an alternative date.
+
+appointment_date=input("Enter preferred appointment date: ")
+doctor_available = input("Is the doctor available on the chosen date? (yes/no): ")
+
+if doctor_available == "yes":
+    res=f"Doctor is available on {appointment_date}. Appointment confirmed."
+else:
+    res=f"Doctor not available on {appointment_date}. Please choose an alternative date."
