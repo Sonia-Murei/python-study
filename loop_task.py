@@ -43,8 +43,8 @@ print(odd_numbers)
 number = int(input("Enter a number: "))
 
 for i in range(1, 11):
-    print(number, "x", i, "=", number * i)
-
+    print(f"{number} x {i} = {number * i}")
+    
 # write a program that counts and prints the number of even numbers between 1 and 50 using a for loop
 
 count = 0
