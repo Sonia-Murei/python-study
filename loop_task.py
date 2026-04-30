@@ -36,36 +36,42 @@ odd_numbers=[]
 for o in list2:
     if o%2 != 0:
         odd_numbers.append(o)
-    if len(odd_numbers) == 10:
-        break
+        if len(odd_numbers) == 10:
+            break
 
 print(odd_numbers)
+
+# Or use count i.e count==0. count==count+1. if count== 10: break
 
 # write a program that takes a number as input and prints its multiplication table up to 10 using a for loop.
 
 number = int(input("Enter a number: "))
 
 for i in range(1, 11):
-    print(f"{number} x {i} = {number * i}")
+    mult=number * i
+    print(f"{number} x {i} = {mult}")
 
 # write a program that counts and prints the number of even numbers between 1 and 50 using a for loop
 
 count = 0
-
+even_no=[]
 for i in range(1, 51):
     if i % 2 == 0:
         count = count + 1
+        even_no.append(i)
 
+print(even_no)
 print("Total even numbers:", count)
 
 # ls1 = [ (“Jay”, ‘20’), (“Mo”, ‘30’), (“Mya”, ‘32’) ]
 # Display the total quantity of the 3 above.
 
-ls1 = [("Jay", 20), ("Mo", 30), ("Mya", 32)]
+ls1 = [("Jay", '20'), ("Mo", '30'), ("Mya", '32')]
 
-total = 0
+total_quantity = 0
 
 for item in ls1:
-    total =total + item[1]
+    quantity=int(item[1])
+    total_quantity =total_quantity + quantity
 
-print("Total quantity:", total)
+print("Total quantity:", total_quantity)
