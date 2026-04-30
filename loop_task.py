@@ -19,8 +19,11 @@ print(divisible_num)
 
 list1=list(range(10,41))
 
-total = sum(list1)
-average = total / len(list1)
+total=0
+
+for s in list1:
+    total = total + s
+    average = total / len(list1)
 
 print("Sum =", total)
 print("Average =", average)
@@ -44,7 +47,7 @@ number = int(input("Enter a number: "))
 
 for i in range(1, 11):
     print(f"{number} x {i} = {number * i}")
-    
+
 # write a program that counts and prints the number of even numbers between 1 and 50 using a for loop
 
 count = 0
