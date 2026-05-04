@@ -20,3 +20,17 @@ print("Total stock:", total)
 # item[-1] picks the last value in each list (the stock)
 # int() converts it from string to number
 # Add everything into total
+
+# Using functions:
+
+def total_stock(prods):
+    total = 0
+    for item in prods:
+        total = total + int(item[-1])
+    return total
+
+prods = [['omo','30kshs','300'], ['milk','50kshs','200'],
+         ['bread','45kshs','359'], ['coffee','5kshs','79']]
+
+total = total_stock(prods)
+print("Total stock:", total)

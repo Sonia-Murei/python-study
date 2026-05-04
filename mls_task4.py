@@ -11,3 +11,15 @@ else:
     res=f'{email} is a valid email.'
 
 print(res)
+
+# Using functions:
+
+def validate_email(email):
+    if "@" not in email or "." not in email:
+        res=f'{email} is an invalid email.'
+    else:
+        res=f'{email} is a valid email.'
+    return res
+
+email=input('Enter email: ')
+result=validate_email(email)

@@ -17,3 +17,21 @@ else:
     grade='E'
 
 print(grade)
+
+# Using functions:
+def grade(marks):
+    if marks>79:
+        return 'A'
+    elif marks>=60 and marks<=79:
+        return 'B'
+    elif marks>49 and marks<=59:
+        return 'C'
+    elif marks>=40 and marks>=49:
+        return 'D'
+    else:
+        return 'E'
+    
+marks=input("Enter marks: ")
+marks=int(marks)
+grade=grade(marks)
+print(f'Grade: {grade}')

@@ -18,3 +18,23 @@ else:
     ret=f'{num3} is the largest'
 
 print(ret)
+
+# Using functions:
+
+def largest_number(num1,num2,num3):
+    if num1>num2 and num1>num3:
+        large=num1
+    elif num2>num1 and num2>num3:
+        large=num2
+    else:
+        large=num3
+    print(large)
+
+input1=input("Enter 1st number: ")
+input1=int(input1)
+input2=input("Enter 2nd number: ")
+input2=int(input2)
+input3=input("Enter 3rd number: ")
+input3=int(input3)
+
+largest_number(input1,input2,input3)
