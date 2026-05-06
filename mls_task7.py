@@ -5,33 +5,38 @@
 marks=input("Enter marks: ")
 marks=int(marks)
 
-if marks>79:
-    grade='A'
-elif marks>=60 and marks<=79:
-    grade='B'
-elif marks>49 and marks<=59:
-    grade='C'
-elif marks>=40 and marks>=49:
-    grade='D'
+if marks>=0 and marks<+100:
+    if marks>79:
+        grade='A'
+    elif marks>=60 and marks<=79:
+        grade='B'
+    elif marks>49 and marks<=59:
+        grade='C'
+    elif marks>=40 and marks>=49:
+        grade='D'
+    else:
+        grade='E'
 else:
-    grade='E'
-
+    grade='Invalid Marks.'
 print(grade)
 
 # Using functions:
 def grade(marks):
-    if marks>79:
-        return 'A'
-    elif marks>=60 and marks<=79:
-        return 'B'
-    elif marks>49 and marks<=59:
-        return 'C'
-    elif marks>=40 and marks>=49:
-        return 'D'
+    if marks>=0 and marks<=100:
+        if marks>79:
+            return 'A'
+        elif marks>=60 and marks<=79:
+            return 'B'
+        elif marks>49 and marks<=59:
+            return 'C'
+        elif marks>=40 and marks>=49:
+            return 'D'
+        else:
+            return 'E'
     else:
-        return 'E'
+        return 'Invalid Marks.'
     
 marks=input("Enter marks: ")
 marks=int(marks)
 grade=grade(marks)
-print(f'Grade: {grade}')
+print(grade)
