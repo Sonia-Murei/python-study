@@ -7,9 +7,9 @@ while True:
     try:
         a = float(input("Enter first value: "))
         b = float(input("Enter second value: "))
+        result = a + b
+        print("Sum:", result)
         break
     except:
         print("invalid character entered")
 
-result = a + b
-print("Sum:", result)

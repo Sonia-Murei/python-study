@@ -58,30 +58,24 @@ print("NHIF:",nhif_value)
 # Continue with the program above, then use  the gross salary to find the NSSF. 
 # To find the Kenya NSSF Rate  using 6% of the Gross Salary. 
 # BUT ONLY A MINIMUM OF 18,000 Gross Salary CAN BE USED IN NSSF.
+   
+
+# NB:/ nssf is capped at 18000:
 
 def nssf(gross_salary):
-    if gross_salary < 18000:
-        return 0
-    else:
-        return 0.06 * gross_salary
+   if gross_salary > 18000:
+       nssf_base = 18000
+   else:
+       nssf_base = gross_salary
     
+   nssf_rate = 0.06 * nssf_base
+   return nssf_rate
+
 
 # Calling
 nssf_value = nssf(gross_salary)
 print("NSSF:", nssf_value)
 
-# If nssf is capped at 18000:
-
-# def nssf(gross_salary):
-#    if gross_salary > 18000:
-#        nssf_base = 18000
-#    else:
-#        nssf_base = gross_salary
-    
-#    nssf_rate = 0.06 * nssf_base
-#    return nssf_rate
-
-# print(nssf(gross_salary))
 
 # Task 17: 
 # Continue with the same program and calculate an individual’s NHDF using:
